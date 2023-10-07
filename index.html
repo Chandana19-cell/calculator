@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>
+        calculator
+    </title>
+    <link rel="stylesheet" href="calci.css">
+    </head>
+
+<body>
+    <h1><marquee>Simple Calculator</marquee> </h1>
+    <table border="3px solid black">
+        <tr style="background-color:crimson;">
+            <td colspan="4">
+                <input type="text" id="box" disabled />
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="display('1')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="2" onclick="display('2')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="3" onclick="display('3')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="+" onclick="display('+')" class="buttons">
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="display('4')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="5" onclick="display('5')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="6" onclick="display('6')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="-" onclick="display('-')" class="buttons">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="display('7')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="8" onclick="display('8')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="9" onclick="display('9')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="*" onclick="display('*')" class="buttons">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="/" onclick="display('/')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="0" onclick="display('0')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="." onclick="display('.')" class="buttons">
+            </td>
+            <td>
+                <input type="button" value="=" onclick="cal()" class="buttons">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="reset" value="Clear" onclick="reset()" class="buttons" style="width:900px;">
+            </td>
+        </tr>
+
+
+    </table>
+
+    <script>
+        function display(val) {
+            document.getElementById("box").value += val;
+        }
+        function reset() {
+            document.getElementById("box").value = " ";
+        }
+        function cal(){
+            var a = document.getElementById("box").value;
+            var b = eval(a);
+            document.getElementById("box").value = b;
+        }
+    </script>
+</body>
+</head>
+
+</html>
